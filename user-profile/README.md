@@ -65,6 +65,7 @@ App will be available at: `http://localhost:3000`
 | ------ | ---------------- | ------------------ |
 | POST   | `/api/users`     | Create new user    |
 | GET    | `/api/users`     | Retrieve all users |
+| GET    | `/api/users/:id` | Get specific user  |
 | PUT    | `/api/users/:id` | Update user by ID  |
 | DELETE | `/api/users/:id` | Delete user by ID  |
 

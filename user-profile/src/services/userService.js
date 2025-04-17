@@ -27,6 +27,11 @@ class UserService {
         return result.rows;
     }
 
+    async getUserById(id) {
+        const result = await db.query("SELECT * FROM users WHERE id = $1", [id]);
+        return result.rows[0] || null;
+    }
+
     async updateUser(id, data) {
         const { error, value } = updateUserSchema.validate(data);
         if (error) throw new Error(error.details[0].message);
@@ -43,6 +48,8 @@ class UserService {
             values.push(val);
             paramIndex++;
         }
+
+        fields.push(`updated_at = CURRENT_TIMESTAMP`);
 
         values.push(id);
 
