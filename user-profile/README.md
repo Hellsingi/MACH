@@ -57,6 +57,20 @@ npm run dev
 
 App will be available at: `http://localhost:3000`
 
+## ⚙️ How to Run Tests
+
+1. **Run the tests:**
+
+```bash
+npm run test
+```
+
+2. **If you want to know test coverage:**
+
+```bash
+npm run test:coverage
+```
+
 ---
 
 ## 🔌 API Endpoints
